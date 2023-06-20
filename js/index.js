@@ -192,11 +192,11 @@ const deliverPizza = (pizzaName) => `Delivering ${pizzaName} pizza.`;
     callback(pizzaName);
   }
   
-  makePizza("Royal Grand", function deliverPizza(pizzaName) {
+  makePizza("Royal Grand", (pizzaName) => {
     console.log(`Delivering pizza ${pizzaName}.`);
   });
   
-  makePizza("Ultracheese", function eatPizza(pizzaName) {
+  makePizza("Ultracheese", (pizzaName) => {
     console.log(`Eating pizza ${pizzaName}`);
   });
   // ex 4
@@ -248,9 +248,10 @@ console.log("Так");
                                                       // ex 3
 console.log("Ні");
                                                       // ex 4
+let showMessagE;
 if (2 > 1){
-  function showMessagE(){
+  showMessagE = () => {
     console.log("Сообщение")
   }
-  showMessagE();
 }
+showMessagE();
